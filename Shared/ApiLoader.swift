@@ -52,6 +52,15 @@ class ApiLoader: ObservableObject {
                     character.occupation = dict["occupation"] as! [String]
                     character.status = dict["status"] as! String
                     character.nickName = dict["nickname"] as! String
+                    if let key = dict["appearance"] { // Can be nil
+                        if let dvsa  = key as? [Int] {
+                            character.seasonAppearance = dvsa                        }
+                    }
+                    if let key = dict["better_call_saul_appearance"] { // Can be nil
+                        if let bcssa  = key as? [Int] {
+                            character.betterCallSaulAppearance = bcssa                            
+                        }
+                    }
                     
                     characters.append(character)
                 }

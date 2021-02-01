@@ -16,6 +16,7 @@ struct Character : Identifiable {
     var status : String = ""
     var nickName : String = ""
     var seasonAppearance : [Int] = [Int]()
+    var betterCallSaulAppearance : [Int] = [Int]()
  
     
 }
